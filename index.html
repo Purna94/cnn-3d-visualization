@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>3D CNN Visualization</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="webgl-container">
+      <div id="info-panel">
+        <div id="node-type"></div>
+        <div id="node-input">
+          <span class="label">Input:</span> <span id="input-val">—</span>
+        </div>
+        <div id="node-output">
+          <span class="label">Activation:</span> <span id="output-val">—</span>
+        </div>
+        <div id="node-calc">
+          <span class="label">Operation:</span> <span id="calc-val">—</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <div id="drawing-section">
+        <div class="panel-title">Draw a digit</div>
+        <div id="drawing-board">
+          <canvas id="draw-canvas" width="280" height="280"></canvas>
+          <canvas id="input-preview" width="28" height="28"></canvas>
+        </div>
+        <button id="clear-btn">Clear</button>
+        <div id="prediction">
+          <div class="pred-row">
+            <span class="pred-label">Prediction:</span>
+            <span id="pred-1" class="pred-value">—</span>
+          </div>
+          <div class="pred-row">
+            <span class="pred-label">Confidence:</span>
+            <span id="pred-conf" class="pred-value">—</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="layers-section">
+        <div class="panel-title">Layer visibility</div>
+        <div id="layer-toggles"></div>
+      </div>
+
+      <div id="status-bar">
+        <span id="status-text">Initializing...</span>
+        <div id="progress-bar"><div id="progress-fill"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="js/colormap.js"></script>
+  <script src="js/network.js"></script>
+  <script src="js/visualization.js"></script>
+  <script src="js/drawing.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
