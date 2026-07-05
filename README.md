@@ -4,8 +4,6 @@ An interactive 3D visualization of a Convolutional Neural Network (LeNet-5) trai
 
 **[Live Demo](https://purna94.github.io/cnn-3d-visualization/)**
 
-![Screenshot](screenshot.png)
-
 ## Features
 
 - **3D Interactive Scene** — Rotate, pan, and zoom using mouse/touch. Built with Three.js.
